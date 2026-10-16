@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+message: "If you use this code or these results, please cite them as below."
+title: "NWRD wheat stripe rust segmentation benchmark"
+type: software
+authors:
+  - family-names: "Sheikh"
+    given-names: "Abdul Hadi"
+repository-code: "https://github.com/ASheikh918/nwrd-segmentation-benchmark"
+keywords:
+  - semantic segmentation
+  - wheat rust
+  - plant disease
+  - NWRD
+  - benchmark
+references:
+  - type: article
+    title: "The NWRD Dataset: An Open-Source Annotated Segmentation Dataset of Diseased Wheat Crop"
+    authors:
+      - family-names: "Anwar"
+        given-names: "Hirra"
+    journal: "Sensors"
+    volume: 23
+    issue: 15
+    start: 6942
+    year: 2023
+    doi: "10.3390/s23156942"
+  - type: article
+    title: "Attention-guided chained context aggregation for semantic segmentation"
+    authors:
+      - family-names: "Tang"
+        given-names: "Quan"
+    journal: "Image and Vision Computing"
+    year: 2021
+    doi: "10.1016/j.imavis.2021.104309"
