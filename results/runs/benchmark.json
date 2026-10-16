@@ -1,0 +1,75 @@
+{
+  "env": {
+    "device": "Tesla T4",
+    "cpu": "x86_64",
+    "cpu_threads": 1,
+    "torch": "2.11.0+cu128"
+  },
+  "results": [
+    {
+      "model": "canet_b4",
+      "description": "CANet, EfficientNet-B4 encoder (ours)",
+      "params_M": 29.392209,
+      "GFLOPs": 36.870955712,
+      "input": "512x512",
+      "GMACs": 18.435477856,
+      "gpu_latency_ms_bs1_fp32": 29.41468300014094,
+      "gpu_latency_ms_bs1_fp16": 36.092509000809514,
+      "gpu_throughput_img_s_bs8_fp16": 75.38286864670836,
+      "gpu_peak_mem_MB_bs8_fp16": 1167.69189453125,
+      "cpu_latency_ms_bs1_fp32": 933.2129000013083
+    },
+    {
+      "model": "unet",
+      "description": "UNet, 4 encoder / 4 decoder blocks, from scratch (NWRD paper baseline)",
+      "params_M": 31.037633,
+      "GFLOPs": 385.339097088,
+      "input": "512x512",
+      "GMACs": 192.669548544,
+      "gpu_latency_ms_bs1_fp32": 87.0683220000501,
+      "gpu_latency_ms_bs1_fp16": 36.027375999765354,
+      "gpu_throughput_img_s_bs8_fp16": 30.794732123591704,
+      "gpu_peak_mem_MB_bs8_fp16": 1873.63671875,
+      "cpu_latency_ms_bs1_fp32": 4759.78692299941
+    },
+    {
+      "model": "deeplabv3plus_r50",
+      "description": "DeepLabV3+, ResNet-50 encoder (baseline)",
+      "params_M": 26.677585,
+      "GFLOPs": 73.12244736,
+      "input": "512x512",
+      "GMACs": 36.56122368,
+      "gpu_latency_ms_bs1_fp32": 25.048335999599658,
+      "gpu_latency_ms_bs1_fp16": 9.76833999993687,
+      "gpu_throughput_img_s_bs8_fp16": 108.18498962471254,
+      "gpu_peak_mem_MB_bs8_fp16": 2243.01806640625,
+      "cpu_latency_ms_bs1_fp32": 894.75474900064
+    },
+    {
+      "model": "unet_tuned",
+      "description": "UNet (paper architecture) with a from-scratch learning rate (config.unet_tuned_lr)",
+      "params_M": 31.037633,
+      "GFLOPs": 385.339097088,
+      "input": "512x512",
+      "GMACs": 192.669548544,
+      "gpu_latency_ms_bs1_fp32": 82.81301900024118,
+      "gpu_latency_ms_bs1_fp16": 34.31267500127433,
+      "gpu_throughput_img_s_bs8_fp16": 29.730609313848525,
+      "gpu_peak_mem_MB_bs8_fp16": 1872.63671875,
+      "cpu_latency_ms_bs1_fp32": 5130.339665000065
+    },
+    {
+      "model": "canet_b4_twopass",
+      "description": "CANet, original two-pass forward",
+      "params_M": 29.392209,
+      "GFLOPs": 52.53813184,
+      "input": "512x512",
+      "GMACs": 26.26906592,
+      "gpu_latency_ms_bs1_fp32": 52.092924999669776,
+      "gpu_latency_ms_bs1_fp16": 58.068958000148996,
+      "gpu_throughput_img_s_bs8_fp16": 40.59698619239807,
+      "gpu_peak_mem_MB_bs8_fp16": 707.62744140625,
+      "cpu_latency_ms_bs1_fp32": 1389.5361660015624
+    }
+  ]
+}
